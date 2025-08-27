@@ -1,107 +1,109 @@
-/* Resetta gli stili predefiniti */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo del sito */
+/* Layout principale */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #0a0a2a; /* Blu scuro per lo sfondo */
-    color: #fff; /* Testo bianco per contrasto */
+    background-color: #0a0a2a;
+    color: #fff;
     display: flex;
-    flex-direction: row; /* Layout a righe (3 colonne) */
-    justify-content: space-between; /* Spaziatura tra le colonne */
-    align-items: flex-start; /* Allinea tutto in alto */
-    height: 100vh; /* Copre tutta la pagina */
-    padding: 20px;
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Colonna sinistra (per il titolo) */
+/* Colonne */
+#leftColumn, #centerColumn, #rightColumn {
+    flex: 1;
+    padding: 20px;
+    height: 100%;
+}
+
+/* Colonna sinistra */
 #leftColumn {
-    flex: 1; /* Occupa una parte dello schermo */
+    background-color: #0d1b2a; /* Blu scuro */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px;
+    border-right: 2px solid #ffd700; /* Divisorio dorato a destra */
 }
 
-/* Colonna centrale (per il pulsante) */
+/* Colonna centrale */
 #centerColumn {
-    flex: 1; /* Occupa una parte dello schermo */
+    background-color: #1b263b; /* Blu più chiaro */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Colonna destra (per il conteggio dei frammenti) */
+/* Colonna destra */
 #rightColumn {
-    flex: 1; /* Occupa una parte dello schermo */
+    background-color: #0d1b2a; /* Blu scuro */
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
-    padding: 20px;
+    border-left: 2px solid #ffd700; /* Divisorio dorato a sinistra */
 }
 
-/* Titolo principale */
+/* Titolo */
 h1 {
-    color: #ffd700; /* Colore oro */
+    color: #ffd700;
     font-size: 3em;
-    margin-bottom: 0;
 }
 
-/* Testo Soul Fragments */
+/* Contatore */
 #resourceCount {
     font-size: 1.5em;
     color: #ffd700;
-    margin-top: 10px;
 }
 
-/* Pulsante Focus */
+/* Pulsante */
 #focusButton {
     padding: 15px 30px;
-    background-color: #1a73e8; /* Blu chiaro per il pulsante */
+    background-color: #1a73e8;
     border: none;
     color: white;
     font-size: 1.5em;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-/* Cambia il colore del pulsante al passaggio del mouse */
 #focusButton:hover {
-    background-color: #0d5db6; /* Blu scuro */
+    background-color: #0d5db6;
 }
 
-/* Log degli eventi (in basso) */
+/* Log */
 #log {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 50, 0.9); /* Fondo blu scuro semi-trasparente */
-    color: #ffd700; /* Colore del testo oro */
+    background-color: rgba(0, 0, 50, 0.9);
+    color: #ffd700;
     padding: 15px;
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     max-height: 200px;
     overflow-y: auto;
-    border-top: 3px solid #ffd700; /* Linea dorata sopra il log */
+    border-top: 3px solid #ffd700;
     z-index: 10;
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra sottile per un effetto di profondità */
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.5);
 }
 
 #log div {
     margin-bottom: 10px;
-    line-height: 1.5; /* Distanza tra le righe */
+    line-height: 1.5;
 }
 
-/* Aggiungi un po' di sfondo alternato per i log */
 #log div:nth-child(odd) {
-    background-color: rgba(0, 0, 70, 0.8); /* Colore di sfondo blu scuro alternato */
+    background-color: rgba(0, 0, 70, 0.8);
 }
 
 #log div:nth-child(even) {
-    background-color: rgba(0, 0, 80, 0.8); /* Colore di sfondo blu scuro alternato */
+    background-color: rgba(0, 0, 80, 0.8);
 }
