@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Colonna sinistra per il titolo -->
+    <!-- Colonna sinistra per il titolo e il menu -->
     <div id="leftColumn">
-        <h1>IdleSouls</h1>
+        <div>
+            <h1>IdleSouls</h1>
+            <nav id="navMenu">
+                <button class="navButton" data-section="meditation">Meditation</button>
+                <!-- Altri pulsanti per future sezioni -->
+            </nav>
+        </div>
     </div>
 
-    <!-- Colonna centrale per il pulsante Focus -->
+    <!-- Colonna centrale per il contenuto dinamico -->
     <div id="centerColumn">
-        <button id="focusButton">Focus</button>
+        <div id="mainContent">
+            <!-- Il contenuto di ciascuna sezione verrà caricato qui -->
+        </div>
     </div>
 
     <!-- Colonna destra per il conteggio dei Soul Fragments -->
@@ -26,9 +34,10 @@
     <div id="log"></div>
 
     <!-- Inclusione dei file JS -->
-    <script src="js/mechanics.js"></script>   <!-- Logica di gioco -->
-    <script src="js/ui.js"></script>          <!-- UI e interfaccia -->
-    <script src="js/game.js"></script>        <!-- Gestisce l'azione principale del gioco -->
-    <script src="js/log.js"></script>         <!-- Gestione del log -->
+    <script src="js/mechanics.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/log.js"></script>
+    <script src="js/navigation.js"></script> <!-- 👈 Aggiunto per la navigazione dinamica -->
 </body>
 </html>
