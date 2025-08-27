@@ -2,12 +2,13 @@
 #logContainer {
     margin-top: 30px;
     font-family: Arial, sans-serif;
-    color: #fff;
+    color: #ffffff; /* Colore del testo */
     background-color: #2c3e50; /* Colore di sfondo scuro per il log */
     padding: 10px;
     border-radius: 8px;
     max-height: 300px;
     overflow-y: auto;
+    border: 2px solid #3498db; /* Aggiungi un bordo blu per visibilità */
 }
 
 /* Stile per ogni voce del log */
@@ -17,13 +18,23 @@
     border-radius: 5px;
     margin: 5px 0;
     font-size: 14px;
+    color: #ecf0f1; /* Colore del testo */
 }
 
-/* Stilizzazione del log (opzionale) */
+/* Stile alternato per le voci */
 .log-entry:nth-child(odd) {
     background-color: #16a085; /* Colore alternato per migliorare la leggibilità */
 }
 
 .log-entry:nth-child(even) {
     background-color: #1abc9c;
+}
+
+/* Aggiungi margine al corpo per il layout */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #ecf0f1; /* Colore di sfondo della pagina */
+    color: #2c3e50; /* Colore del testo principale */
 }
