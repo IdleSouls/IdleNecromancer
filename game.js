@@ -9,6 +9,19 @@ function updateResourceCount() {
     resourceCountElement.textContent = soulFragments;
 }
 
+// Funzione per aggiungere il risultato al log
+function addToLog(message) {
+    const logContainer = document.getElementById('logContainer');
+    
+    // Crea un nuovo elemento div per il log
+    const logEntry = document.createElement('div');
+    logEntry.classList.add('log-entry');
+    logEntry.textContent = message;
+    
+    // Aggiungi la nuova entry al log
+    logContainer.appendChild(logEntry);
+}
+
 // Funzione per gestire l'azione del pulsante "Focus" (meccanica di gacha)
 function focusButtonClicked() {
     // Genera un numero casuale di Soul Fragments tra 0 e 3
@@ -20,8 +33,11 @@ function focusButtonClicked() {
     // Aggiorna il conteggio delle risorse sullo schermo
     updateResourceCount();
 
-    // Log per debug
-    console.log(`Hai ottenuto ${randomFragments} Soul Fragments! Totale: ${soulFragments}`);
+    // Crea il messaggio del log
+    const message = `Hai ottenuto ${randomFragments} Soul Fragments! Totale: ${soulFragments}`;
+
+    // Aggiungi il messaggio al log
+    addToLog(message);
 }
 
 // Aggiungi l'evento click al pulsante "Focus"
