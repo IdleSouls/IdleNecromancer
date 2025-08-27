@@ -1,1 +1,1 @@
-Gioco IdleSouls
+IdleSouls
