@@ -1,12 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     background-color: #1b1b2f; /* Colore di sfondo scuro */
     color: #f4f4f9; /* Colore del testo chiaro */
+    text-align: left; /* Allinea tutto il testo a sinistra */
+    padding: 20px; /* Aggiungi un po' di padding per margini */
 }
 
 h1 {
     color: #f1c40f; /* Oro */
+    text-align: left; /* Assicurati che il titolo sia allineato a sinistra */
+}
+
+#resourceCount {
+    font-size: 2em;
+    margin: 20px 0;
 }
 
 .button {
@@ -15,26 +22,24 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
     font-size: 18px;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.button:hover {
-    background-color: #2980b9; /* Blu scuro */
-}
-
-#resourceCount {
-    font-size: 2em;
-    margin: 20px;
-}
-
+/* Pulsante "Focus" */
 #focusButton {
     background-color: #9b59b6; /* Viola chiaro */
+    display: block; /* Rende il pulsante un blocco */
+    margin: 20px auto; /* Centra il pulsante */
+}
+
+/* Hover effetti */
+.button:hover {
+    background-color: #2980b9; /* Blu scuro */
 }
 
 #focusButton:hover {
     background-color: #8e44ad; /* Viola scuro */
 }
-
