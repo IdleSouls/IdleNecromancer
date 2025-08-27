@@ -1,14 +1,39 @@
-body { font-family: Arial, sans-serif; text-align: center; }
-h1 { color: #4CAF50; }
-.button { 
-    padding: 10px 20px; 
-    background-color: #4CAF50; 
-    color: white; 
-    border: none; 
-    cursor: pointer; 
-    margin-top: 10px;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1b1b2f; /* Colore di sfondo scuro */
+    color: #f4f4f9; /* Colore del testo chiaro */
 }
-.button:hover { background-color: #45a049; }
-#resourceCount { font-size: 2em; margin: 20px; }
-#upgradeButton { margin-top: 20px; }
 
+h1 {
+    color: #f1c40f; /* Oro */
+}
+
+.button {
+    padding: 15px 30px;
+    background-color: #3498db; /* Blu */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2980b9; /* Blu scuro */
+}
+
+#resourceCount {
+    font-size: 2em;
+    margin: 20px;
+}
+
+#focusButton {
+    background-color: #9b59b6; /* Viola chiaro */
+}
+
+#focusButton:hover {
+    background-color: #8e44ad; /* Viola scuro */
+}
