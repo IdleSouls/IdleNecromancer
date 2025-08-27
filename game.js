@@ -4,6 +4,9 @@ let soulFragments = 0;
 // Selezione dell'elemento che mostra il conteggio delle risorse
 const resourceCountElement = document.getElementById('resourceCount');
 
+// Selezione dell'elemento dell'immagine
+const soulFragmentImage = document.getElementById('soulFragmentImage');
+
 // Funzione che aggiorna il conteggio delle risorse nella pagina
 function updateResourceCount() {
     resourceCountElement.textContent = soulFragments;
@@ -22,6 +25,17 @@ function addToLog(message) {
     logContainer.appendChild(logEntry);
 }
 
+// Funzione per cambiare l'immagine in base ai Soul Fragments
+function updateFragmentImage() {
+    if (soulFragments === 0) {
+        soulFragmentImage.src = 'path/to/empty_fragment.png'; // Immagine per 0 Soul Fragments
+    } else if (soulFragments <= 3) {
+        soulFragmentImage.src = 'path/to/low_fragment.png'; // Immagine per Soul Fragments tra 1 e 3
+    } else {
+        soulFragmentImage.src = 'path/to/high_fragment.png'; // Immagine per più di 3 Soul Fragments
+    }
+}
+
 // Funzione per gestire l'azione del pulsante "Focus" (meccanica di gacha)
 function focusButtonClicked() {
     // Genera un numero casuale di Soul Fragments tra 0 e 3
@@ -32,6 +46,9 @@ function focusButtonClicked() {
 
     // Aggiorna il conteggio delle risorse sullo schermo
     updateResourceCount();
+
+    // Cambia l'immagine in base al numero di Soul Fragments
+    updateFragmentImage();
 
     // Crea il messaggio del log
     const message = `Hai ottenuto ${randomFragments} Soul Fragments! Totale: ${soulFragments}`;
