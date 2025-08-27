@@ -1,1 +1,14 @@
+body { font-family: Arial, sans-serif; text-align: center; }
+h1 { color: #4CAF50; }
+.button { 
+    padding: 10px 20px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+    margin-top: 10px;
+}
+.button:hover { background-color: #45a049; }
+#resourceCount { font-size: 2em; margin: 20px; }
+#upgradeButton { margin-top: 20px; }
 
