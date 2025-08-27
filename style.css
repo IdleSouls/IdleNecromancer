@@ -10,18 +10,20 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1b1b2f; /* Colore di sfondo scuro */
     color: #f4f4f9; /* Colore del testo chiaro */
-    text-align: left; /* Allinea tutto il testo a sinistra */
     padding: 20px;
     width: 100%;
     height: 100vh;
-    display: block; /* Usa il blocco di default, senza centrare verticalmente */
-    overflow-x: hidden; /* Nasconde eventuali scroll orizzontali */
+    position: absolute; /* Posiziona l'elemento in alto a sinistra */
+    top: 0; /* Allinea al top */
+    left: 0; /* Allinea a sinistra */
+    text-align: left; /* Allinea tutto il testo a sinistra */
 }
 
 /* Titolo */
 h1 {
     color: #f1c40f; /* Oro */
     text-align: left; /* Assicurati che il titolo sia allineato a sinistra */
+    margin-bottom: 20px; /* Aggiungi margine per distanziare un po' */
 }
 
 /* Contenuto risorse */
@@ -31,7 +33,7 @@ h1 {
     text-align: left; /* Assicura che il conteggio delle risorse sia a sinistra */
 }
 
-/* Pulsante "Focus" centrato */
+/* Pulsante "Focus" centrato orizzontalmente */
 #focusButton {
     background-color: #9b59b6; /* Viola chiaro */
     display: block; /* Cambia il display in blocco per centrarlo */
