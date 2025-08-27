@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IdleSouls</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Collegamento al CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>IdleSouls</h1>
-    <img id="soulFragmentImage" src="path/to/empty_fragment.png" alt="Soul Fragment" />
-    <p>Soul Fragments: <span id="resourceCount">0</span></p>
-    <button class="button" id="focusButton">Focus</button>
+    <div id="resourceCount">Soul Fragments: 0</div>
+    <button id="focusButton">Focus</button>
+    
+    <!-- Log degli eventi -->
+    <div id="log"></div>
 
-    <!-- Log dei risultati del gacha -->
-    <div id="logContainer"></div>
-
-    <!-- Collega i file JS separati -->
-    <script src="js/game.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/mechanics.js"></script>
-    <script src="js/log.js"></script>
+    <!-- Inclusione dei file JS -->
+    <script src="js/mechanics.js"></script>   <!-- Logica di gioco -->
+    <script src="js/ui.js"></script>          <!-- UI e interfaccia -->
+    <script src="js/game.js"></script>        <!-- Gestisce l'azione principale del gioco -->
+    <script src="js/log.js"></script>         <!-- Gestione del log -->
 </body>
 </html>
