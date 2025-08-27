@@ -3,62 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulatore di Swarm</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; }
-        h1 { color: #4CAF50; }
-        .button { 
-            padding: 10px 20px; 
-            background-color: #4CAF50; 
-            color: white; 
-            border: none; 
-            cursor: pointer; 
-            margin-top: 10px;
-        }
-        .button:hover { background-color: #45a049; }
-        #resourceCount { font-size: 2em; margin: 20px; }
-        #upgradeButton { margin-top: 20px; }
-    </style>
+    <title>IdleSouls</title>
+    <link rel="stylesheet" href="style.css"> <!-- Collega il CSS -->
 </head>
 <body>
-    <h1>Simulatore di Swarm</h1>
-    <p>Risorse: <span id="resourceCount">0</span></p>
-    <button class="button" id="gatherButton">Raccogli Risorse</button>
-    <h2>Upgrade</h2>
-    <button class="button" id="upgradeButton">Acquista Upgrade (10 Risorse)</button>
+    <h1>IdleSouls</h1>
+    <p>Soul Fragments: <span id="resourceCount">0</span></p>
+    <button class="button" id="focusButton">Focus</button>
 
-    <script>
-        // Variabili iniziali
-        let resources = 0;
-        let upgradeCost = 10;
-
-        // Verifica se il pulsante esiste prima di aggiungere l'evento
-        const gatherButton = document.getElementById('gatherButton');
-        if (gatherButton) {
-            gatherButton.addEventListener('click', () => {
-                resources++; // Incrementa le risorse
-                document.getElementById('resourceCount').textContent = resources; // Aggiorna il display
-            });
-        } else {
-            console.error('Il pulsante "Raccogli Risorse" non è stato trovato!');
-        }
-
-        // Funzione per acquistare un upgrade
-        const upgradeButton = document.getElementById('upgradeButton');
-        if (upgradeButton) {
-            upgradeButton.addEventListener('click', () => {
-                if (resources >= upgradeCost) {
-                    resources -= upgradeCost; // Deduce il costo dell'upgrade
-                    upgradeCost = Math.floor(upgradeCost * 1.5); // Aumenta il costo dell'upgrade
-                    document.getElementById('resourceCount').textContent = resources; // Aggiorna le risorse
-                    alert('Upgrade acquistato!');
-                } else {
-                    alert('Non hai abbastanza risorse!');
-                }
-            });
-        } else {
-            console.error('Il pulsante "Acquista Upgrade" non è stato trovato!');
-        }
-    </script>
+    <script src="game.js"></script> <!-- Collega il JavaScript -->
 </body>
 </html>
+
