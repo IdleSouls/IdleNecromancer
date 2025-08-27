@@ -5,17 +5,17 @@
     box-sizing: border-box;
 }
 
-/* Impostazioni di base per il corpo */
+/* Corpo del sito */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #0a0a2a; /* Colore di sfondo blu scuro */
-    color: #fff; /* Colore del testo bianco */
-    padding: 20px;
+    background-color: #0a0a2a; /* Blu scuro per lo sfondo */
+    color: #fff; /* Testo bianco per contrasto */
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Allinea tutto a sinistra */
     justify-content: flex-start;
     height: 100vh; /* Copre tutta la pagina */
+    padding: 20px;
 }
 
 /* Titolo principale */
@@ -25,17 +25,17 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Testo "Soul Fragments" */
+/* Testo Soul Fragments */
 #resourceCount {
     font-size: 1.5em;
-    color: #ffd700; /* Colore oro */
+    color: #ffd700;
     margin-top: 10px;
 }
 
 /* Pulsante Focus */
 #focusButton {
     padding: 10px 20px;
-    background-color: #1a73e8; /* Blu per il pulsante */
+    background-color: #1a73e8; /* Blu chiaro per il pulsante */
     border: none;
     color: white;
     font-size: 1.2em;
