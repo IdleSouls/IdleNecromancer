@@ -1,85 +1,70 @@
-/* Stile per il corpo della pagina */
-body {
+/* Resetta gli stili predefiniti */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Impostazioni di base per il corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a2a; /* Colore di sfondo blu scuro */
+    color: #fff; /* Colore del testo bianco */
     padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #ecf0f1; /* Colore di sfondo chiaro per la pagina */
-    color: #2c3e50; /* Colore del testo principale */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra il contenuto orizzontalmente */
+    align-items: flex-start; /* Allinea tutto a sinistra */
     justify-content: flex-start;
-    min-height: 100vh;
+    height: 100vh; /* Copre tutta la pagina */
 }
 
-/* Stile per il titolo */
+/* Titolo principale */
 h1 {
-    color: #2980b9; /* Colore blu per il titolo */
-    font-size: 36px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* Stile per l'immagine dei Soul Fragments */
-img {
-    width: 100px;
-    height: 100px;
-    display: block;
+    color: #ffd700; /* Colore oro */
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
-/* Stile per il conteggio delle risorse */
+/* Testo "Soul Fragments" */
 #resourceCount {
-    font-size: 24px;
-    font-weight: bold;
-    color: #f39c12; /* Colore oro per il conteggio delle risorse */
+    font-size: 1.5em;
+    color: #ffd700; /* Colore oro */
+    margin-top: 10px;
 }
 
-/* Stile per il pulsante Focus */
-.button {
+/* Pulsante Focus */
+#focusButton {
     padding: 10px 20px;
-    background-color: #f39c12; /* Colore oro per il pulsante */
-    color: white;
+    background-color: #1a73e8; /* Blu per il pulsante */
     border: none;
+    color: white;
+    font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
     margin-top: 20px;
 }
 
-.button:hover {
-    background-color: #e67e22; /* Colore più scuro al passaggio del mouse */
+/* Cambia il colore del pulsante al passaggio del mouse */
+#focusButton:hover {
+    background-color: #0d5db6; /* Blu scuro */
 }
 
-/* Stile per il contenitore del log (fissato in basso) */
-#logContainer {
-    position: fixed; /* Fissiamo il log in basso */
+/* Log degli eventi (in basso) */
+#log {
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    max-height: 200px; /* Altezza massima per il log */
-    overflow-y: auto;
-    font-family: Arial, sans-serif;
-    background-color: #2c3e50; /* Colore di sfondo scuro per il log */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo scuro trasparente */
+    color: #fff;
     padding: 10px;
-    border-top: 2px solid #3498db; /* Bordo blu superiore per separare dal resto */
-    color: #fff; /* Colore testo chiaro */
+    font-family: monospace;
+    font-size: 1em;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
 }
 
-/* Stile per ogni voce del log */
-.log-entry {
-    background-color: #34495e; /* Colore di sfondo per ogni voce del log */
-    padding: 8px;
-    border-radius: 5px;
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-/* Stile alternato per le voci */
-.log-entry:nth-child(odd) {
-    background-color: #16a085; /* Colore alternato per migliorare la leggibilità */
-}
-
-.log-entry:nth-child(even) {
-    background-color: #1abc9c;
+#log div {
+    margin-bottom: 10px;
 }
