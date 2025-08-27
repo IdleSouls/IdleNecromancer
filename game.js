@@ -21,8 +21,8 @@ function addToLog(message) {
     logEntry.classList.add('log-entry');
     logEntry.textContent = message;
     
-    // Aggiungi la nuova entry al log
-    logContainer.appendChild(logEntry);
+    // Aggiungi il nuovo messaggio al **top** del log (invertere ordine)
+    logContainer.insertBefore(logEntry, logContainer.firstChild);
 }
 
 // Funzione per cambiare l'immagine in base ai Soul Fragments
