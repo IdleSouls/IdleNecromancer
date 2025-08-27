@@ -11,10 +11,36 @@ body {
     background-color: #0a0a2a; /* Blu scuro per lo sfondo */
     color: #fff; /* Testo bianco per contrasto */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Allinea tutto a sinistra */
-    justify-content: flex-start;
+    flex-direction: row; /* Layout a righe (3 colonne) */
+    justify-content: space-between; /* Spaziatura tra le colonne */
+    align-items: flex-start; /* Allinea tutto in alto */
     height: 100vh; /* Copre tutta la pagina */
+    padding: 20px;
+}
+
+/* Colonna sinistra (per il titolo) */
+#leftColumn {
+    flex: 1; /* Occupa una parte dello schermo */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Colonna centrale (per il pulsante) */
+#centerColumn {
+    flex: 1; /* Occupa una parte dello schermo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Colonna destra (per il conteggio dei frammenti) */
+#rightColumn {
+    flex: 1; /* Occupa una parte dello schermo */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     padding: 20px;
 }
 
@@ -22,7 +48,7 @@ body {
 h1 {
     color: #ffd700; /* Colore oro */
     font-size: 3em;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 /* Testo Soul Fragments */
@@ -34,14 +60,13 @@ h1 {
 
 /* Pulsante Focus */
 #focusButton {
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #1a73e8; /* Blu chiaro per il pulsante */
     border: none;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.5em;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
 /* Cambia il colore del pulsante al passaggio del mouse */
