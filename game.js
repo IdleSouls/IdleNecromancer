@@ -1,18 +1,32 @@
-// Variabile globale per tenere traccia dei Soul Fragments
+// Variabile globale per il conteggio delle risorse
 let soulFragments = 0;
 
-// Funzione per generare un numero casuale nel range 0-3
-function generateFragments() {
-    // Gacha: genera un numero casuale tra 0 e 3
-    const fragmentsEarned = Math.floor(Math.random() * 4);  // 0, 1, 2, o 3
-    soulFragments += fragmentsEarned;  // Aggiungi i fragments ottenuti al totale
+// Selezione dell'elemento che mostra il conteggio delle risorse
+const resourceCountElement = document.getElementById('resourceCount');
 
-    // Aggiorna il conteggio delle risorse nel DOM
-    document.getElementById('resourceCount').textContent = soulFragments;
-    
-    // Aggiungi un messaggio per informare il giocatore di quanto ha ottenuto
-    alert(`Hai ottenuto ${fragmentsEarned} Soul Fragments!`);
+// Funzione che aggiorna il conteggio delle risorse nella pagina
+function updateResourceCount() {
+    resourceCountElement.textContent = soulFragments;
 }
 
-// Aggiungi l'evento al pulsante "Focus"
-document.getElementById('focusButton').addEventListener('click', generateFragments);
+// Funzione per gestire l'azione del pulsante "Focus" (meccanica di gacha)
+function focusButtonClicked() {
+    // Genera un numero casuale di Soul Fragments tra 0 e 3
+    const randomFragments = Math.floor(Math.random() * 4); // 0, 1, 2, o 3
+
+    // Aggiungi i Soul Fragments generati al totale
+    soulFragments += randomFragments;
+
+    // Aggiorna il conteggio delle risorse sullo schermo
+    updateResourceCount();
+
+    // Log per debug
+    console.log(`Hai ottenuto ${randomFragments} Soul Fragments! Totale: ${soulFragments}`);
+}
+
+// Aggiungi l'evento click al pulsante "Focus"
+const focusButton = document.getElementById('focusButton');
+focusButton.addEventListener('click', focusButtonClicked);
+
+// Inizializza il conteggio delle risorse (anche se è 0 all'inizio)
+updateResourceCount();
