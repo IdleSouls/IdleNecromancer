@@ -7,13 +7,13 @@
 
 /* Layout principale */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #0a0a2a;
-    color: #fff;
     display: flex;
     flex-direction: row;
     height: 100vh;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a2a;
+    color: #fff;
 }
 
 /* Colonne */
@@ -23,30 +23,36 @@ body {
     height: 100%;
 }
 
-/* Colonna sinistra */
+/* Colonna sinistra (adatta al contenuto) */
 #leftColumn {
-    background-color: #0d1b2a; /* Blu scuro */
+    width: auto;
+    padding: 20px;
+    background-color: #0d1b2a;
+    border-right: 2px solid #ffd700;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    border-right: 2px solid #ffd700; /* Divisorio dorato a destra */
 }
 
-/* Colonna centrale */
+/* Colonna centrale (riempie tutto lo spazio restante) */
 #centerColumn {
-    background-color: #1b263b; /* Blu più chiaro */
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #1b263b;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Colonna destra */
+/* Colonna destra (adatta al contenuto) */
 #rightColumn {
-    background-color: #0d1b2a; /* Blu scuro */
+    width: auto;
+    padding: 20px;
+    background-color: #0d1b2a;
+    border-left: 2px solid #ffd700;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    border-left: 2px solid #ffd700; /* Divisorio dorato a sinistra */
 }
 
 /* Titolo */
