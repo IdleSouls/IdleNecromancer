@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Corpo del documento */
 body {
     font-family: Arial, sans-serif;
     background-color: #1b1b2f; /* Colore di sfondo scuro */
@@ -13,17 +14,14 @@ body {
     padding: 20px;
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start; /* Allinea tutto a sinistra */
+    display: block; /* Usa il blocco di default, senza centrare verticalmente */
+    overflow-x: hidden; /* Nasconde eventuali scroll orizzontali */
 }
 
 /* Titolo */
 h1 {
     color: #f1c40f; /* Oro */
     text-align: left; /* Assicurati che il titolo sia allineato a sinistra */
-    width: 100%;
 }
 
 /* Contenuto risorse */
