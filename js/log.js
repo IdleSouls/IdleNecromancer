@@ -1,13 +1,17 @@
-// log.js: Gestisce l'aggiunta di voci al log
-
-function addToLog(message) {
-    const logContainer = document.getElementById('logContainer');
+// Funzione per aggiungere nuovi log
+function updateLog(message) {
+    const logContainer = document.getElementById('log');
     
     // Crea un nuovo elemento div per il log
-    const logEntry = document.createElement('div');
-    logEntry.classList.add('log-entry');
-    logEntry.textContent = message;
+    const newLog = document.createElement('div');
+    newLog.textContent = message;
+    
+    // Aggiungi il nuovo log all'inizio del contenitore
+    logContainer.insertBefore(newLog, logContainer.firstChild);
 
-    // Aggiungi il nuovo messaggio al top del log (inverte ordine)
-    logContainer.insertBefore(logEntry, logContainer.firstChild);
+    // Limita il numero di log che vengono mostrati (esempio: massimo 10 log)
+    const logItems = logContainer.getElementsByTagName('div');
+    if (logItems.length > 10) {
+        logContainer.removeChild(logItems[logItems.length - 1]);
+    }
 }
