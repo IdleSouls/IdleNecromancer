@@ -1,4 +1,4 @@
-/* Reset di base per evitare conflitti */
+/* Reset globale per evitare conflitti */
 * {
     margin: 0;
     padding: 0;
@@ -13,31 +13,29 @@ body {
     padding: 20px;
     width: 100%;
     height: 100vh;
-    position: absolute; /* Posiziona l'elemento in alto a sinistra */
-    top: 0; /* Allinea al top */
-    left: 0; /* Allinea a sinistra */
-    text-align: left; /* Allinea tutto il testo a sinistra */
+    position: relative; /* Posizione relativa per il corpo */
+    top: 0;
+    left: 0;
+    text-align: left; /* Assicurati che tutto il testo sia allineato a sinistra */
 }
 
 /* Titolo */
 h1 {
     color: #f1c40f; /* Oro */
-    text-align: left; /* Assicurati che il titolo sia allineato a sinistra */
-    margin-bottom: 20px; /* Aggiungi margine per distanziare un po' */
+    margin-bottom: 20px; /* Distanza dal contenuto sottostante */
 }
 
-/* Contenuto risorse */
+/* Conteggio delle risorse */
 #resourceCount {
     font-size: 2em;
     margin: 20px 0;
-    text-align: left; /* Assicura che il conteggio delle risorse sia a sinistra */
 }
 
 /* Pulsante "Focus" centrato orizzontalmente */
 #focusButton {
     background-color: #9b59b6; /* Viola chiaro */
-    display: block; /* Cambia il display in blocco per centrarlo */
-    margin: 20px auto; /* Centra il pulsante */
+    display: block; /* Cambia il display in blocco per centrarlo orizzontalmente */
+    margin: 20px auto; /* Centra il pulsante orizzontalmente */
     padding: 15px 30px;
     color: white;
     border: none;
@@ -47,7 +45,7 @@ h1 {
     transition: background-color 0.3s ease;
 }
 
-/* Pulsante generico (altri pulsanti allineati a sinistra) */
+/* Pulsante generico (allineato a sinistra) */
 .button {
     padding: 15px 30px;
     background-color: #3498db; /* Blu */
