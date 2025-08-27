@@ -1,19 +1,14 @@
-let resources = 0;
-let upgradeCost = 10;
+// Variabili iniziali
+let soulFragments = 0;
+let focusRate = 1; // Numero di Soul Fragments guadagnati per focus
 
-document.getElementById('gatherButton').addEventListener('click', () => {
-    resources++;
-    document.getElementById('resourceCount').textContent = resources;
-});
-
-document.getElementById('upgradeButton').addEventListener('click', () => {
-    if (resources >= upgradeCost) {
-        resources -= upgradeCost;
-        upgradeCost = Math.floor(upgradeCost * 1.5);
-        document.getElementById('resourceCount').textContent = resources;
-        alert('Upgrade acquistato!');
-    } else {
-        alert('Non hai abbastanza risorse!');
-    }
-});
-
+// Funzione per raccogliere "Soul Fragments"
+const focusButton = document.getElementById('focusButton');
+if (focusButton) {
+    focusButton.addEventListener('click', () => {
+        soulFragments += focusRate; // Incrementa le risorse
+        document.getElementById('resourceCount').textContent = soulFragments; // Aggiorna il display
+    });
+} else {
+    console.error('Il pulsante "Focus" non è stato trovato!');
+}
